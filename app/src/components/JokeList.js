@@ -1,12 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
+import Joke from './Joke'
 import {getJokes} from '../actions/actions'
 
 
 
 export const JokeList = props => {
-
+    console.log(props.jokes)
     const fetchJokes = e => {
         e.preventDefault()
         props.getJokes()
@@ -16,6 +16,12 @@ export const JokeList = props => {
         <div>
             <h1>Random Joke Finder</h1>
             <button onClick={fetchJokes}>Find Jokes</button>
+            <div>
+                {props.jokes.map( joke => (
+                    
+                    <Joke key={joke.id} joke={joke} />
+                 ) )}
+            </div>
         </div>
     )
 }

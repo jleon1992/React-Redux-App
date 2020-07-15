@@ -13,13 +13,22 @@ const initialState = {
 export function reducer(state = initialState, action) {
 switch( action.type){
     case FETCH_JOKES_START:
+        console.log('start')
         return {
             ...state,
+            jokes: [],
             error: '',
             isFetching: true
         }
-} 
- return state
-}
+    case FETCH_JOKES_SUCCESS:
+        console.log(action.payload)
+        return {
+            ...state,
+            jokes: action.payload,
+            error: '',
+            isFetching: false
+        }
+    default:
+        return state
+}}
 
-// export default reducer
