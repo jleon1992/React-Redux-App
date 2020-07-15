@@ -6,7 +6,7 @@ import {getJokes} from '../actions/actions'
 
 
 export const JokeList = props => {
-    console.log(props.jokes)
+    // console.log(props.jokes)
     const fetchJokes = e => {
         e.preventDefault()
         props.getJokes()
