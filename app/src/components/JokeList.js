@@ -17,10 +17,10 @@ export const JokeList = props => {
             <h1>Random Joke Finder</h1>
             <button onClick={fetchJokes}>Find Jokes</button>
             <div>
-                {props.jokes.map( joke => (
-                    
+                {props.jokes.map( joke => (                    
                     <Joke key={joke.id} joke={joke} />
                  ) )}
+                 {props.error && <p>Oh no, something went wrong :( {props.error}</p>}
             </div>
         </div>
     )

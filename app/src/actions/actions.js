@@ -14,6 +14,7 @@ export const getJokes = () => dispatch => {
         dispatch({ type: FETCH_JOKES_SUCCESS, payload: res.data })
     })
     .catch(err => {
-        console.log(err)
+        console.log(err.response)
+        dispatch({ type: FETCH_JOKES_FAILURE, payload: err.response })
     })
 }

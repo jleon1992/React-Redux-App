@@ -28,6 +28,12 @@ switch( action.type){
             error: '',
             isFetching: false
         }
+    case FETCH_JOKES_FAILURE:
+        return {
+            ...state,
+            error: action.payload.status,
+            isFetching: false
+        }
     default:
         return state
 }}
