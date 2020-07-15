@@ -44,3 +44,15 @@
   color: purple;
   cursor: pointer;
 }
+
+.punchline{
+  font-size: 2rem;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.jokeCard{
+  border: 10px solid darkgreen;
+  background-color: lightgreen;
+  margin: 2%;
+}

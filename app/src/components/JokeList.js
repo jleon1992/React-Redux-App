@@ -10,6 +10,7 @@ export const JokeList = props => {
     const fetchJokes = e => {
         e.preventDefault()
         props.getJokes()
+        
     }
 
     return (
@@ -22,6 +23,8 @@ export const JokeList = props => {
                  ) )}
                  {props.error && <p>Oh no, something went wrong :( {props.error}</p>}
             </div>
+            <a href="javascript:window.print()"><img src="./click-here-to-print.jpg" alt="print this page" id="print-button" className='invisible' />    </a>
+
         </div>
     )
 }

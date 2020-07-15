@@ -12,6 +12,8 @@ export const getJokes = () => dispatch => {
     .then(res => {
         // console.log(res.data)
         dispatch({ type: FETCH_JOKES_SUCCESS, payload: res.data })
+        const print = document.getElementById('print-button')
+        print.classList.remove('invisible')
     })
     .catch(err => {
         // console.log(err.response)
